@@ -1,6 +1,5 @@
 import currencies
 from app import app
-from flask import session
 from unittest import TestCase
 
 class AppTests(TestCase):
