@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex App</title>
+</head>
+<body>
+
+    {% for msg in get_flashed_messages() %}
+        <p>{{ msg }}</p>
+    {% endfor %}
+
+    <form method="POST" class="exchange_form" action="/exchange">
+        <label>
+            Converting from 
+            <input type="text" id="from" name="from">
+        </label>
+        <label>
+            Converting to
+            <input type="text" id="to" name="to">
+        </label>
+        <label>
+            Amount
+            <input type="text" id="amount" name="amount">
+        </label>
+        <button>Convert</button>
+    </form>
+
+</body>
+</html>
